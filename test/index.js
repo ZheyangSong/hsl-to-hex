@@ -1,7 +1,7 @@
 const hsl = require('../')
 const { test } = require('tap')
 
-test('pure white', ({is, end}) => {
+test('pure white', ({ is, end }) => {
   const expected = '#ffffff'
   const actual = hsl(0, 100, 100)
   const it = 'max saturation and luminosity should return pure white'
@@ -9,7 +9,7 @@ test('pure white', ({is, end}) => {
   end()
 })
 
-test('medium gray', ({is, end}) => {
+test('medium gray', ({ is, end }) => {
   const expected = '#808080'
   const actual = hsl(0, 0, 50)
   const it = '0% saturation, 50% luminosity should be medium gray'
@@ -17,7 +17,7 @@ test('medium gray', ({is, end}) => {
   end()
 })
 
-test('hue', ({is, end}) => {
+test('hue', ({ is, end }) => {
   {
     const expected = '#ff0000'
     const actual = hsl(0, 100, 50)
@@ -39,7 +39,7 @@ test('hue', ({is, end}) => {
   end()
 })
 
-test('degree overflow/underflow', ({is, end}) => {
+test('degree overflow/underflow', ({ is, end }) => {
   {
     const expected = hsl(1, 100, 50)
     const actual = hsl(361, 100, 50)
@@ -55,7 +55,7 @@ test('degree overflow/underflow', ({is, end}) => {
   end()
 })
 
-test('max/min constraint', ({is, end}) => {
+test('max/min constraint', ({ is, end }) => {
   {
     const expected = hsl(0, 101, 50)
     const actual = hsl(0, 100, 50)
