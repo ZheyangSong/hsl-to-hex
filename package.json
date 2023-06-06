@@ -1,10 +1,10 @@
 {
   "name": "@douismyheart/hsl-to-hex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && tap --cov test",
-    "lint": "standard"
+    "lint": "standard --fix"
   },
   "keywords": [],
   "author": "Zheyang Song",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "standard": "^12.0.1",
-    "tap": "^12.4.0"
+    "tap": "^16.3.6"
   },
   "directories": {
     "test": "test"
